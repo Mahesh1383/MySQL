@@ -3,8 +3,7 @@ show tables;
 
 ----- Movies -----
 
-alter table movies
-add column date_1 date;
+alter table movies add column date_1 date;
 
 update movies
 set date_1 = cast(date_published as date);
@@ -4448,13 +4447,12 @@ order by avg_movie_ratings desc;
 
 -- Based on the analysis, provide recommendations for the types of content Bolly movies should focus on producing.
 
-select * from names;
-select * from movies;
-select * from genre;
-select * from ratings;
-select * from director_mapping;
-SELECT production_company   , COUNT(id) as movie_count,  year
--- RANK() OVER (ORDER BY count(id) DESC) as movie_count
- FROM movies
-where country = 'India'
- ;
+-- Segment 7: Recommendations
+
+-- Based on the results of the above queries, you can provide detailed recommendations for Bolly movies to focus on. For example:
+
+-- Content Preferences: If the data shows high ratings and viewership for thriller and drama genres, Bolly movies can prioritize producing more content in these genres.
+-- Production House Strategies: Top production houses with high ratings in multilingual and Hindi movies can explore cross-industry collaborations and expansion into other languages.
+-- Director and Actor Insights: Insights into top-performing directors and actors can help in making casting decisions to increase the chances of movie success.
+-- Viewer Trends: Trends in monthly or yearly releases can guide scheduling and marketing efforts for new movies.
+-- By following this structured approach, you can extract valuable insights from the movie database to support strategic decision-making for Bolly movies.
